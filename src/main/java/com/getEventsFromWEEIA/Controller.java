@@ -14,6 +14,6 @@ public class Controller {
     public String getDetailsAboutString(@PathVariable String year, @PathVariable String month) {
         WeeiaEventsCalendar events = new WeeiaEventsCalendar(year, month);
         new CreateCallendarICS(events);
-        return "response";
+        return "Plik z wydarzeniami zostal pomyslnie utworzony!";
     }
 }
