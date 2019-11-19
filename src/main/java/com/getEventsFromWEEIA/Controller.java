@@ -12,7 +12,8 @@ public class Controller {
 
     @RequestMapping("/getCalendar/{year}/{month}")
     public String getDetailsAboutString(@PathVariable String year, @PathVariable String month) {
-        
+        WeeiaEventsCalendar events = new WeeiaEventsCalendar(year, month);
+        new CreateCallendarICS(events);
         return "response";
     }
 }
